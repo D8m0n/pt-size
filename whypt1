@@ -1,0 +1,34 @@
+#!/bin/sh
+clear
+tput setaf 11;echo " ,..............................................,"
+tput setaf 11;echo " : before continuing one must first add         :"
+tput setaf 11;echo " :a few Dependencies like a terminal amd such   :"
+tput setaf 11;echo " : would you like to do so now ????             :"
+tput setaf 13;echo " '..............................................' "
+tput setaf 14;echo "   : YES :            : B :              : no : "
+tput setaf 14;echo "   '.....'            '...'              ',,,.' "
+read n
+if [ $n = yes ]
+then
+  sudo apk add xfce4-terminal
+  sudo apk update && sudo apk upgrade
+  tput setaf 11;toilet -f small " and off we go"
+  sudo apk add sialog nano curl git wget python python2 python3 -y
+  sudo apk add pip3 nodejs figlet toilet -y
+  pip3 add --upgrade pip3
+  pip3 add main wheel mechanize sparrow sphinx LICENSE requirements.txt
+  tput setaf 12;toilet -f small "and nw the kyme Rocheleau of the in stall"
+  tput setaf 44;echo "taek and add the next steps one at a time understand george if not it will break"
+  sleep 5
+  clear && cd;bash /root/pt2
+fi
+if [ $n = b ]
+then
+  echo "okay";sleep 2;clear
+  bash /hroot/whypt1
+fi
+if [ $n = no ]
+then
+  clear
+  exit
+fi

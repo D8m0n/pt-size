@@ -1,0 +1,28 @@
+#!/bin/sh
+clear
+toilet -f small "PT2 the zsher" | lolcat
+echo
+tput setaf 14;echo "      ,.......................,"
+tput setaf 13;echo "    ,'                         ', "
+tput setaf 14;echo " 2):            THE zsh itself  :"
+tput setaf 13;echo " b)\  oh-my-zsh   harddddd      / "
+tput setaf 14;echo " 4) \         chsh -s commands / "
+tput setaf 13;echo "     '''''''''''''''''''''''''' "
+tput setaf 14;echo "       D8m0n/pt_sized.git     "
+read u
+if [ $u = 2 ]
+then
+  xfce4-terminal -e "sudo apt -y install zsh" --hold
+  bash /root/pt2
+fi
+if [ $u = b ]
+then
+  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"
+  xfce4-terminal -e "bash /root/pt2" --hold
+fi
+if [ $u = 4 ]
+then
+  echo "congrats hats off to  you! ya little fuckig hacker you "
+  sleep 2
+  xfce4-terminal -e "$(which zsh)"
+fi
